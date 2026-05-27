@@ -796,17 +796,20 @@ footer { background: var(--footer); padding: 56px 64px 32px; }
       <div id="hs-form-container" style="margin-top:12px;"></div>
     </div>
 
-    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+    <script charset="utf-8" type="text/javascript" src="https://js.hsforms.net/forms/embed/v2.js"></script>
     <script>
-      window.addEventListener('load', function() {
-        if (typeof hbspt !== 'undefined') {
-          hbspt.forms.create({
-            portalId: "44780021",
-            formId: "c0ee9591-3156-4b34-a10f-36f41e459209",
-            region: "na1",
-            target: "#hs-form-container"
-          });
-        }
+      document.addEventListener('DOMContentLoaded', function() {
+        var interval = setInterval(function() {
+          if (typeof hbspt !== 'undefined') {
+            clearInterval(interval);
+            hbspt.forms.create({
+              portalId: "44780021",
+              formId: "c0ee9591-3156-4b34-a10f-36f41e459209",
+              region: "na1",
+              target: "#hs-form-container"
+            });
+          }
+        }, 100);
       });
     </script>
 
