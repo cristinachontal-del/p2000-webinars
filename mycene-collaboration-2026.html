@@ -470,34 +470,37 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* ── PACKAGES ── */
-/* pkg-single replaces packages-layout */
-.pkg-single { width: 100%; }
-.pkg-single-top {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 40px;
-  margin-bottom: 32px;
-}
-.pkg-single-top > div { flex: 1; max-width: 680px; }
-.pkg-boxes {
+/* ── PACKAGES ── */
+.pkg-layout {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  grid-template-columns: 1fr 320px;
+  gap: 64px;
+  align-items: start;
+}
+.pkg-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.pkg-right {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 .pkg-box {
   background: var(--bg);
   border: 1px solid var(--border);
   border-radius: var(--rc);
-  padding: 22px 24px;
+  padding: 18px 22px;
   transition: box-shadow .2s;
 }
 .pkg-box:hover { box-shadow: 0 3px 14px rgba(43,94,167,.09); }
 .pkg-box-val {
-  font-size: 14.5px;
+  font-size: 14px;
   font-weight: 700;
   color: var(--navy);
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 .pkg-box-label {
   font-size: 13px;
@@ -1212,16 +1215,16 @@ footer { background: var(--footer); padding: 56px 64px 32px; }
 <!-- PACKAGES -->
 <section class="section">
   <div class="wrap">
-    <div class="pkg-single">
-      <div class="pkg-single-top">
-        <div>
+    <div class="pkg-layout">
+      <div class="pkg-left">
+        <div class="pkg-title-row">
           <h2 class="sec-h">ERP Packages Tailored to Your Business</h2>
-          <p class="sec-p" style="margin-top:14px;">Pentagon 2000 offers flexible, modular ERP packages designed around operational requirements across MRO, manufacturing, distribution and supply chain environments.</p>
-          <p class="sec-p" style="margin-top:10px;">Organizations can expand functionality as operational needs evolve.</p>
+          <a href="https://www.pentagon2000.com/contactus" target="_blank" class="btn-pkg">Talk to our team</a>
         </div>
-        <a href="https://www.pentagon2000.com/contactus" target="_blank" class="btn-pkg">Talk to our team</a>
+        <p class="sec-p" style="margin-top:16px;">Pentagon 2000 offers flexible, modular ERP packages designed around operational requirements across MRO, manufacturing, distribution and supply chain environments.</p>
+        <p class="sec-p" style="margin-top:10px;">Organizations can expand functionality as operational needs evolve.</p>
       </div>
-      <div class="pkg-boxes">
+      <div class="pkg-right">
         <div class="pkg-box">
           <div class="pkg-box-val">Seat-based licensing</div>
           <div class="pkg-box-label">Competitive, per-user pricing model</div>
