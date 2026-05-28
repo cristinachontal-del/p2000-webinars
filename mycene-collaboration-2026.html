@@ -48,7 +48,7 @@ a { text-decoration: none; color: inherit; }
   margin: 0 auto;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 560px;
+  grid-template-columns: 1fr 650px;
   gap: 56px;
   align-items: start;
   position: relative;
@@ -482,24 +482,28 @@ a { text-decoration: none; color: inherit; }
   gap: 16px;
 }
 .pkg-highlights {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 280px;
 }
 .pkg-hl-item {
   background: var(--bg);
   border: 1px solid var(--border);
   border-radius: var(--rc);
-  padding: 20px 18px;
+  padding: 16px 20px;
   transition: box-shadow .2s;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 .pkg-hl-item:hover { box-shadow: 0 3px 12px rgba(43,94,167,.08); }
 .pkg-hl-val {
   font-size: 14px;
   font-weight: 700;
   color: var(--navy);
-  margin-bottom: 4px;
+  margin-bottom: 2px;
+  white-space: nowrap;
 }
 .pkg-hl-label {
   font-size: 12.5px;
@@ -1175,7 +1179,7 @@ footer { background: var(--footer); padding: 56px 64px 32px; }
 <section class="section alt">
   <div class="wrap">
     <div class="row-top">
-      <div><h2 class="sec-h">Flexible Deployment, Your Way</h2></div>
+      <div><h2 class="sec-h">Flexible Deployment</h2></div>
     </div>
     <div class="sol-grid">
       <div class="sol-card">
@@ -1204,8 +1208,7 @@ footer { background: var(--footer); padding: 56px 64px 32px; }
     <div class="packages-layout">
       <div class="packages-left">
         <h2 class="sec-h">ERP Packages Tailored to Your Business</h2>
-        <p class="sec-p">Pentagon 2000 offers competitive seat-based pricing with flexible packages built around your specific industry — whether you are in MRO, manufacturing, or parts distribution and brokerage.</p>
-        <p class="sec-p" style="margin-top:12px;">Each core package includes the essential modules your business needs to run smoothly, with the option to customize further by adding specialized features or integrations as your operations evolve.</p>
+        <p class="sec-p">Pentagon 2000 offers seat-based pricing with flexible packages built around your industry — MRO, manufacturing, or parts distribution. Add modules as your operations grow.</p>
         <div style="margin-top:24px;">
           <a href="https://www.pentagon2000.com/contactus" target="_blank" class="btn-pkg">Talk to our team</a>
         </div>
