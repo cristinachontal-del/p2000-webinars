@@ -279,10 +279,10 @@ a { text-decoration: none; color: inherit; }
   color: var(--green);
   text-decoration: underline;
   text-underline-offset: 3px;
-  white-space: nowrap; flex-shrink: 0;
+  white-space: nowrap; flex-shrink: 0; display: inline-flex; align-items: center;
   transition: opacity .18s;
 }
-.row-top .t-link::after { content: ' ->'; }
+.row-top .t-link::after { content: ' →'; white-space: nowrap; }
 .t-link:hover { opacity: .70; }
 
 /* ── INDUSTRIES ── */
