@@ -470,45 +470,39 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* ── PACKAGES ── */
-.packages-layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 72px;
-  align-items: start;
-}
-.packages-right {
+/* pkg-single replaces packages-layout */
+.pkg-single { width: 100%; }
+.pkg-single-top {
   display: flex;
-  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 32px;
+}
+.pkg-single-top > div { flex: 1; max-width: 680px; }
+.pkg-boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
 }
-.pkg-highlights {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  max-width: 280px;
-}
-.pkg-hl-item {
+.pkg-box {
   background: var(--bg);
   border: 1px solid var(--border);
   border-radius: var(--rc);
-  padding: 16px 20px;
+  padding: 22px 24px;
   transition: box-shadow .2s;
-  display: flex;
-  align-items: center;
-  gap: 16px;
 }
-.pkg-hl-item:hover { box-shadow: 0 3px 12px rgba(43,94,167,.08); }
-.pkg-hl-val {
-  font-size: 14px;
+.pkg-box:hover { box-shadow: 0 3px 14px rgba(43,94,167,.09); }
+.pkg-box-val {
+  font-size: 14.5px;
   font-weight: 700;
   color: var(--navy);
-  margin-bottom: 2px;
-  white-space: nowrap;
+  margin-bottom: 6px;
 }
-.pkg-hl-label {
-  font-size: 12.5px;
+.pkg-box-label {
+  font-size: 13px;
   color: var(--soft);
-  line-height: 1.4;
+  line-height: 1.5;
 }
 .btn-pkg {
   display: inline-flex;
@@ -1218,32 +1212,27 @@ footer { background: var(--footer); padding: 56px 64px 32px; }
 <!-- PACKAGES -->
 <section class="section">
   <div class="wrap">
-    <div class="packages-layout">
-      <div class="packages-left">
-        <h2 class="sec-h">ERP Packages Tailored to Your Business</h2>
-        <p class="sec-p">Pentagon 2000 offers flexible, modular ERP packages designed around operational requirements across MRO, manufacturing, distribution and supply chain environments.</p>
-        <p class="sec-p" style="margin-top:12px;">Organizations can expand functionality as operational needs evolve.</p>
-        <ul class="pkg-bullets">
-          <li>Seat-based licensing</li>
-          <li>Modular platform architecture</li>
-          <li>Scalable deployment options</li>
-        </ul>
-        <div style="margin-top:24px;">
-          <a href="https://www.pentagon2000.com/contactus" target="_blank" class="btn-pkg">Talk to our team</a>
+    <div class="pkg-single">
+      <div class="pkg-single-top">
+        <div>
+          <h2 class="sec-h">ERP Packages Tailored to Your Business</h2>
+          <p class="sec-p" style="margin-top:14px;">Pentagon 2000 offers flexible, modular ERP packages designed around operational requirements across MRO, manufacturing, distribution and supply chain environments.</p>
+          <p class="sec-p" style="margin-top:10px;">Organizations can expand functionality as operational needs evolve.</p>
         </div>
+        <a href="https://www.pentagon2000.com/contactus" target="_blank" class="btn-pkg">Talk to our team</a>
       </div>
-      <div class="packages-right">
-        <div class="pkg-highlights">
-          <div class="pkg-hl-item">
-            <div class="pkg-hl-val">Seat-based</div>
-            <div class="pkg-hl-label">Licensing per user</div>
-          </div>
-          <div class="pkg-hl-item">
-            <div class="pkg-hl-val">Modular</div>
-            <div class="pkg-hl-label">Configure by operational need</div>
-          </div>
-
-
+      <div class="pkg-boxes">
+        <div class="pkg-box">
+          <div class="pkg-box-val">Seat-based licensing</div>
+          <div class="pkg-box-label">Competitive, per-user pricing model</div>
+        </div>
+        <div class="pkg-box">
+          <div class="pkg-box-val">Modular platform architecture</div>
+          <div class="pkg-box-label">Configure only what your operation needs</div>
+        </div>
+        <div class="pkg-box">
+          <div class="pkg-box-val">Scalable deployment options</div>
+          <div class="pkg-box-label">On-premise, cloud or browser-native</div>
         </div>
       </div>
     </div>
