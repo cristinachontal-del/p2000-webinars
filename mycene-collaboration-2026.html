@@ -491,32 +491,36 @@ a { text-decoration: none; color: inherit; }
   gap: 14px;
 }
 .pkg-box {
-  background: var(--navy);
-  border-radius: var(--rc);
-  padding: 18px 20px;
+  background: #F7F8FA;
+  border-radius: 10px;
+  padding: 20px 22px;
   position: relative;
   overflow: hidden;
-  transition: background .2s;
+  transition: background .22s, box-shadow .22s;
 }
-.pkg-box::before {
+.pkg-box::after {
   content: '';
   position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--teal), transparent);
+  top: 0; left: 20px; right: 20px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(58,175,169,.45), transparent);
 }
-.pkg-box:hover { background: #234d8a; }
+.pkg-box:hover {
+  background: #F0F2F5;
+  box-shadow: 0 2px 12px rgba(43,94,167,.07);
+}
 .pkg-box-val {
-  font-size: 13px;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 4px;
-  letter-spacing: .01em;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 5px;
+  letter-spacing: -.01em;
 }
 .pkg-box-label {
   font-size: 12px;
-  color: rgba(255,255,255,.55);
+  color: #999;
   line-height: 1.5;
+  font-weight: 400;
 }
 .btn-pkg {
   display: inline-flex;
