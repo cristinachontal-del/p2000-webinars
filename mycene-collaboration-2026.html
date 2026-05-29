@@ -39,18 +39,20 @@ a { text-decoration: none; color: inherit; }
 .hero {
   background: linear-gradient(130deg, #3B6FA8 0%, #2E8A8A 55%, #3AAFA9 100%);
   min-height: 600px;
-  padding: 72px 64px 72px;
+  padding: 72px max(64px, 5vw) 72px;
   display: flex;
   align-items: flex-start;
   position: relative;
   overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
 }
 .hero-inner {
   max-width: var(--w);
   margin: 0 auto;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 650px;
+  grid-template-columns: 1fr min(650px, 45%);
   gap: 56px;
   align-items: start;
   position: relative;
@@ -270,7 +272,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* ── SHARED SECTION ── */
-.section { padding: 64px 64px; }
+.section { padding: 64px max(64px, 5vw); width: 100%; box-sizing: border-box; }
 .section.alt { background: var(--bg); }
 .wrap { max-width: var(--w); margin: 0 auto; }
 .row-top { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 44px; gap: 24px; }
@@ -336,7 +338,8 @@ a { text-decoration: none; color: inherit; }
 
 .bench-airplane-img {
   width: 100%;
-  height: 420px;
+  height: 100%;
+  min-height: 380px;
   object-fit: cover;
   border-radius: 12px;
   display: block;
@@ -563,7 +566,7 @@ a { text-decoration: none; color: inherit; }
 .news-card:hover { box-shadow: 0 8px 28px rgba(43,94,167,.13); transform: translateY(-3px); }
 .news-img-wrap {
   width: 100%;
-  height: 200px;
+  height: clamp(160px, 15vw, 240px);
   overflow: hidden;
   background: #f5f8fa;
   display: flex;
@@ -722,10 +725,26 @@ footer { background: var(--footer); padding: 56px 64px 32px; }
 /* ── Wrap padding on smaller screens ── */
 .wrap { padding: 0 24px; }
 
-/* ── Large desktop (1400px+) ── */
+/* ── Large desktop (1400px–1599px) ── */
 @media (min-width: 1400px) {
   :root { --w: 1320px; }
-  .hero { padding: 80px 80px; }
+  .hero { padding: 80px 6vw; }
+}
+
+/* ── XL desktop (1600px–1919px) ── */
+@media (min-width: 1600px) {
+  :root { --w: 1480px; }
+  .hero { padding: 80px 7vw; }
+  .section { padding: 80px 7vw; }
+}
+
+/* ── 2K / Ultra-wide (1920px+) ── */
+@media (min-width: 1920px) {
+  :root { --w: 1700px; }
+  .hero { padding: 90px 8vw; min-height: 680px; }
+  .section { padding: 90px 8vw; }
+  .sec-h { font-size: 32px; }
+  .hero-left h1 { font-size: 52px; }
 }
 
 /* ── Tablet landscape (1024px–1199px) ── */
