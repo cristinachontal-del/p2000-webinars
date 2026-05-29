@@ -863,39 +863,6 @@ footer { background: var(--footer); padding: 56px 64px 32px; }
 }
 
 
-/* ── MYCENE COLLABORATION ── */
-.mycene-collab {
-  position: absolute;
-  bottom: 36px;
-  left: max(64px, 5vw);
-  width: 520px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 14px;
-}
-.mycene-collab-text {
-  font-size: 12px;
-  font-weight: 500;
-  color: rgba(255,255,255,.55);
-  letter-spacing: .04em;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-.mycene-logo-link {
-  display: flex;
-  align-items: center;
-  opacity: .85;
-  transition: opacity .2s;
-}
-.mycene-logo-link:hover { opacity: 1; }
-.mycene-logo {
-  height: 36px;
-  width: auto;
-  display: block;
-  filter: brightness(0) invert(1);
-}
-
 /* ── LANGUAGE SWITCHER ── */
 .lang-bar {
   position: fixed;
@@ -936,6 +903,39 @@ span[lang-only="fr"] { display: none; }
 span[lang-only="en"] { display: inline; }
 body.fr-mode span[lang-only="en"] { display: none; }
 body.fr-mode span[lang-only="fr"] { display: inline; }
+
+/* ── MYCENE COLLABORATION ── */
+.mycene-collab {
+  position: absolute;
+  bottom: 36px;
+  left: max(64px, 5vw);
+  width: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+}
+.mycene-collab-text {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255,255,255,.55);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.mycene-logo-link {
+  display: flex;
+  align-items: center;
+  opacity: .85;
+  transition: opacity .2s;
+}
+.mycene-logo-link:hover { opacity: 1; }
+.mycene-logo {
+  height: 64px;
+  width: auto;
+  display: block;
+  filter: brightness(0) invert(1);
+}
 </style>
 </head>
 <body>
@@ -1041,6 +1041,7 @@ body.fr-mode span[lang-only="fr"] { display: inline; }
       </div>
     </div>
 
+    <!-- RIGHT: HubSpot webinar form -->
     <!-- MYCENE COLLABORATION -->
     <div class="mycene-collab">
       <span class="mycene-collab-text">
@@ -1052,7 +1053,6 @@ body.fr-mode span[lang-only="fr"] { display: inline; }
       </a>
     </div>
 
-    <!-- RIGHT: HubSpot webinar form -->
     <div class="hero-form-wrap" id="webinar-form">
       <div class="hero-form-title"><span lang-only="en">Register for Our Webinar</span><span lang-only="fr">Inscrivez-vous a notre webinaire</span></div>
       <div class="hero-form-sub"><span lang-only="en">Thursday, June 18 &middot; 3:00 PM CET &middot; Online &middot; 55 minutes</span><span lang-only="fr">Jeudi 18 juin &middot; 15h00 CET &middot; En ligne &middot; 55 minutes</span></div>
