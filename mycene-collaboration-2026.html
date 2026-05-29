@@ -29,6 +29,7 @@
   --w:       1200px;
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { margin: 0; padding: 0; width: 100%; }
 body { font-family: var(--f); color: var(--text); background: var(--white); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 a { text-decoration: none; color: inherit; }
 
@@ -46,6 +47,7 @@ a { text-decoration: none; color: inherit; }
   overflow: hidden;
   width: 100%;
   box-sizing: border-box;
+  margin: 0;
 }
 .hero-inner {
   max-width: var(--w);
@@ -272,7 +274,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* ── SHARED SECTION ── */
-.section { padding: 64px max(64px, 5vw); width: 100%; box-sizing: border-box; }
+.section { padding: 64px max(64px, 5vw); width: 100%; box-sizing: border-box; margin: 0; }
 .section.alt { background: var(--bg); }
 .wrap { max-width: var(--w); margin: 0 auto; }
 .row-top { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 44px; gap: 24px; }
