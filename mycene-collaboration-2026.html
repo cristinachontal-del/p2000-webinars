@@ -329,6 +329,12 @@ a { text-decoration: none; color: inherit; }
 .ind-body a:hover { opacity: .70; }
 
 /* ── BENCHMARK ── */
+.bench-airplane-panel {
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 440px;
+  position: relative;
+}
 .bench-right {
   position: relative;
   border-radius: 12px;
@@ -357,21 +363,7 @@ a { text-decoration: none; color: inherit; }
   padding: 2px 8px; white-space: nowrap; flex-shrink: 0;
 }
 .bench-tag.new-tag { color: var(--teal); border-color: rgba(58,175,169,.40); }
-.spec-panel { background: var(--navy); border-radius: var(--rc); overflow: hidden; }
-.sp-head {
-  background: rgba(0,0,0,.15); padding: 14px 22px;
-  font-size: 10.5px; font-weight: 700; letter-spacing: .13em;
-  text-transform: uppercase; color: rgba(255,255,255,.38);
-}
-.sp-rows { padding: 0 22px; }
-.sp-row {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.07); gap: 12px;
-}
-.sp-row:last-child { border-bottom: none; }
-.sp-key { font-size: 13px; color: rgba(255,255,255,.48); }
-.sp-val { font-size: 13px; font-weight: 600; color: rgba(255,255,255,.88); text-align: right; }
-.sp-val.ok { color: #7DD88A; }
+/* spec panel removed */
 .sp-foot {
   display: grid; grid-template-columns: 1fr 1fr 1fr;
   background: rgba(0,0,0,.12); border-top: 1px solid rgba(255,255,255,.07);
