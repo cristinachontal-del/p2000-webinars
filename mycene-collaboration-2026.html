@@ -940,11 +940,7 @@ body.fr-mode span[lang-only="fr"] { display: inline; }
 </head>
 <body>
 
-<div class="lang-bar">
-  <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
-  <span class="lang-sep">|</span>
-  <button class="lang-btn" id="btn-fr" onclick="setLang('fr')">FR</button>
-</div>
+
 
 <!-- HERO — no nav, you will add yours -->
 <section class="hero">
@@ -1020,11 +1016,11 @@ body.fr-mode span[lang-only="fr"] { display: inline; }
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:18px;flex-wrap:wrap;">
         <div style="display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.85);padding:5px 14px;border-radius:20px;">🇫🇷 <span lang-only="en">France &middot; June 18, 2026</span><span lang-only="fr">France &middot; 18 juin 2026</span></div>
         <div style="display:flex;gap:3px;">
-          <button onclick="setLang('en')" class="lang-btn" data-lang="en" style="font-size:11px;font-weight:700;color:#fff;background:rgba(255,255,255,.25);border:none;border-radius:4px;padding:4px 9px;cursor:pointer;">EN</button>
-          <button onclick="setLang('fr')" class="lang-btn" data-lang="fr" style="font-size:11px;font-weight:400;color:rgba(255,255,255,.55);background:none;border:none;border-radius:4px;padding:4px 9px;cursor:pointer;">FR</button>
+          <button onclick="setLang('en')" class="lang-btn active" id="btn-en" style="font-size:11px;font-weight:700;color:#fff;background:rgba(255,255,255,.25);border:none;border-radius:4px;padding:4px 9px;cursor:pointer;">EN</button>
+          <button onclick="setLang('fr')" class="lang-btn" id="btn-fr" style="font-size:11px;font-weight:400;color:rgba(255,255,255,.55);background:none;border:none;border-radius:4px;padding:4px 9px;cursor:pointer;">FR</button>
         </div>
       </div>
-      <h1><span lang-only="en"><span style="font-weight:700;">Pentagon 2000</span> <span style="font-weight:300;font-size:.75em;opacity:.85;">&middot; Aerospace and Defense</span><br><span style="font-weight:700;">ERP &amp; MRO Software</span></span><span lang-only="fr"><span style="font-weight:700;">Pentagon 2000</span> <span style="font-weight:300;font-size:.75em;opacity:.85;">&middot; A&eacute;rospatiale et D&eacute;fense</span><br><span style="font-weight:700;">Logiciel ERP &amp; MRO</span></span></h1>
+      <h1><span lang-only="en"><span style="font-weight:700;">Pentagon 2000</span> <span style="font-weight:300;font-size:.75em;opacity:.85;">&middot; Aerospace and Defense</span><br><span style="font-weight:700;">ERP &amp; MRO Software</span><br><span style="font-weight:300;font-size:.65em;opacity:.75;letter-spacing:.02em;">Now arriving in France</span></span><span lang-only="fr"><span style="font-weight:700;">Pentagon 2000</span> <span style="font-weight:300;font-size:.75em;opacity:.85;">&middot; A&eacute;rospatiale et D&eacute;fense</span><br><span style="font-weight:700;">Logiciel ERP &amp; MRO</span><br><span style="font-weight:300;font-size:.65em;opacity:.75;letter-spacing:.02em;">D&eacute;sormais disponible en France</span></span></h1>
       <p class="hero-p" lang-only="en">A fully integrated ERP platform designed for aviation, defense, MRO, manufacturing and parts distribution operations. Pentagon 2000 helps organizations manage maintenance, inventory, supply chain, compliance, finance and traceability within a single operational system.</p><p class="hero-p" lang-only="fr">Une plateforme ERP entièrement intégrée, conçue pour l'aviation, la défense, la MRO, la fabrication et la distribution de pièces. Pentagon 2000 centralise la maintenance, les stocks, la chaîne logistique, la conformité réglementaire, les finances et la traçabilité dans un seul système opérationnel.</p>
 
       <!-- Award card — replaces dashboard -->
